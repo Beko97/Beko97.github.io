@@ -1,0 +1,416 @@
+@charset "utf-8";
+
+html {font-size: 62.5%;}
+
+body {
+    background-color: #ffffff;
+    color: #FFFFFF;
+    font-family: dnp-shuei-mgothic-std,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6em;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 45px 10px;
+}
+
+.about_text p, .search_text {line-height: 1.15;}
+
+/* header*/
+.mainVisual {
+    background: #ff8438 url("image/header_img_pc.jpg") no-repeat center bottom/cover;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+}
+
+.deco {
+    position: absolute;
+    width: 25%;
+    z-index: 1;
+}
+
+.mainVisual_list {
+    background-color: #ff8438;
+    display: flex;
+    font-weight: 600;
+    height: 10%;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+
+.mainVisual_list::after {
+    background: url("image/orangeDot.png") center;
+    content: "";
+    height: 48px;
+    left: 0;
+    position: absolute;
+    top: 6%;
+    width: 100%;
+    z-index: -1;
+}
+
+.mainVisual_list li {
+    font-size: 2rem;
+    margin-right: 30px;
+    padding-top: 25px;
+}
+
+.mainVisual_list li a {color: #ffffff;}
+
+.mainVisual_list li a:hover {
+    border-bottom: solid #ffffff;
+}
+
+h1 {
+    bottom: 0;
+    left: 10%;
+    margin: 0;
+    position: absolute;
+    width: 40%;
+    min-width: 500px;
+}
+
+.mainVisual_credit {
+    background-color: rgba(203, 197, 197, 0.5);
+    bottom: 0;
+    padding: 0 8px;
+    position: absolute;
+    right: 0%;
+}
+
+.lineSpace {margin-top: 30px;}
+
+h2 {
+    color: #ff6633;
+    font-family: otomanopee-one, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+    -webkit-text-stroke: 1px #FFFFFF;
+}
+
+.blue {color: #3366ff;}
+
+/*about*/
+.about {
+    background: #11bbf4;
+    position: relative;
+}
+
+.container-about {
+    position: relative;
+    z-index: 2;
+}
+
+.about_box {
+    align-items: center;
+    display: flex;
+    margin-top: 45px;
+}
+
+.about_illust, .about_text {width: 50%;}
+
+.about_illust {
+    display: flex;
+    position: relative;
+}
+
+.illust-idol {
+    margin-right: -20px;
+    min-width: 38%;
+    width: 40%;
+}
+.illust-girl {
+    margin-top: 50px;
+    width: 33%;
+}
+.illust-cosmetic {
+    min-width: 31%;
+    width: 38%;
+}
+.illust-costume, .illust-food {
+    bottom: 20%;
+    position: absolute;
+}
+.illust-costume {
+    left: 0;
+    width: 35%;
+}
+.illust-food {
+    right: 0;
+    width: 34%;
+}
+
+.about_text {
+    font-size: 2rem;
+    margin-left: 30px;
+}
+
+.button {
+    margin:0 auto;
+    width: 20%;
+}
+
+.pageUp {
+    bottom: 0;
+    display: none;
+    position: fixed;
+    right: 10px;
+    width: 80px;
+}
+
+.about_bg {
+    bottom: -10px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.about_bg img {
+    height: 100vh;
+    max-width: none;
+    object-fit: cover;
+    width: 100%;
+}
+
+/*search*/
+.search {
+    background-color: #ff8438;
+    padding-top: 15px;
+    position: relative;
+}
+
+.search::before {
+    background: url("image/blueDot.png") center;
+    content: "";
+    height: 48px;
+    left: 0;
+    position: absolute;
+    top: -27px;
+    width: 100%;
+}
+
+.search::after {
+    background: url("image/orangeDot.png") center;
+    bottom: -21px;
+    content: "";
+    height: 48px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.search_list {display: flex;}
+
+.search_list li, aside div {text-align: center;}
+
+h3 {
+    font-size: 2.2rem;
+    margin-top: 20px;
+    white-space: nowrap;
+}
+
+.search_list li {
+    flex: 1;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.search_icon {
+    margin: 0 auto;
+    width: 55%;
+}
+
+.search_text {
+    font-size: 2rem;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/*aside*/
+.banner {
+    background: #11bbf4 url("image/dot2.png") no-repeat center bottom/cover;
+    font-size: 2rem;
+    padding-top: 15px;
+}
+
+.banner_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner_list p {
+    margin-top: 16px;
+    width: 45%;
+}
+
+.banner_list-sns {
+    margin: 30px auto 0 auto;
+    width:60%;
+}
+
+.banner_item {margin-left: 30px;}
+
+footer {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.banner_credit {
+    color: #000000;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .mainVisual_list, .about_box, .search_list, .banner_list {
+        display: block;
+    }
+
+    .container {
+        margin: 0 auto;
+        max-width: 575px;
+        padding: 25px 15px;
+    }
+
+    .mainVisual {
+        background: #ff8438 url("image/header_img_sp.jpg") right top/cover;
+}
+
+    .deco {
+        min-width: 165px;
+        width: 30%;
+    }
+
+    .mainVisual_list {
+        height: auto;
+        padding-bottom: 15px;
+        padding-top: 0;
+        position: fixed;
+        text-align: center;
+        top: -30%;
+        transition: 0.5s;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .mainVisual_list::after {transition: 0.5s;}
+
+    .mainVisual_list-blue {background-color: #11bbf4;}/*jQuery操作*/
+
+    .mainVisual_list-blue::after {/*jQuery操作*/
+        background: url("image/blueDot.png") center;
+    }
+
+    .mainVisual_list li {
+        margin-right: 0;
+        padding-top: 15px;
+    }
+
+    .mainVisual_list::after {top: 83%;}
+
+    #hamburger {
+        cursor: pointer;
+        display: block;
+        height: 35px;
+        position: fixed;
+        right: 15px;
+        top: 8px;
+        width: 35px;
+        z-index: 3;
+    }
+
+    span, span:before, span:after {
+        display: block;
+        background-color: #ffffff;
+        height: 4px;
+        position: absolute;
+        transition: 0.5s;
+        width: 100%;
+    }
+
+    span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    span:before, span:after {content: "";}
+
+    span:before {margin-top: -10px;}
+
+    span:after {margin-top: 11px;}
+
+    span.clicked {background-color: transparent;}
+
+    span.clicked:before {
+        margin-top: 0;
+        transform: rotate(-45deg);
+    }
+
+    span.clicked:after {
+        margin-top: 0;
+        transform: rotate(-135deg);
+    }
+
+    .mainVisual_list.clicked {top: 0;}
+
+    h1 {
+        left: 0;
+        min-width: 332px;
+        width: 65%;
+    }
+
+    .mainVisual_credit, .banner_credit {font-size: 1.2rem;}
+
+    /*about*/
+    h2 {font-size: 3.8rem;}
+
+    .about_illust, .about_text {
+        margin: 0 auto;
+        width: auto;
+    }
+
+    .about_illust {max-width: 480px;}
+
+    .about_text {margin-top: 20px;}
+
+    .button {
+        margin-top: 20px;
+        min-width: 125px;
+        width: 35%;
+    }
+
+    .pageUp {width: 70px;}
+
+    .about_bg {
+        height: 840px;
+        width: 100%;
+    }
+
+    .about_bg img {
+        height: 100%;
+        width: 100%;
+    }
+
+    /*banner*/
+    .banner_list p {
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 268px;
+        width: 60%;
+    }
+
+    .banner_item {margin-left: 0;}
+
+    .banner_list-sns {width: 40%;}
+
+    section:last-of-type ul {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
