@@ -292,7 +292,7 @@ footer {
         padding-top: 0;
         position: fixed;
         text-align: center;
-        top: -180px;
+        top: -180%;
         transition: 0.5s;
         width: 100%;
         z-index: 3;
