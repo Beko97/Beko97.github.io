@@ -22,7 +22,7 @@ body {
 /* header*/
 .mainVisual {
     background: #ff8438 url("image/header_img_pc.jpg") no-repeat center bottom/cover;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
     z-index: 3;
 }
