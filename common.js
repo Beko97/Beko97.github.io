@@ -9,12 +9,36 @@ $(function() {
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
     })(document);
 
-    //ファーストビューsp調節
     var windowW = parseInt($(window).innerWidth());
-    if (windowW < 767) {
-        var windowH = parseInt($(window).height());
+    var windowH = parseInt($(window).height());
+
+    function firstVew() {//ファーストビュー調節
         $('.mainVisual-sp').css('height', windowH);
     }
+
+    function dropDownC() {//サブメニューSP動作設定
+        $('#open').on('click', function() {
+            $('.idol_list').stop().slideToggle(300);
+        });
+    }
+
+    function dropDownH() {//サブメニューpc動作設定
+        $('#open').hover(function() {
+                $('.idol_list').stop().slideToggle(300);
+        });
+    }
+
+    if (windowW < 767) {
+        firstVew();
+        dropDownC();
+    } else {
+        dropDownH();
+    }
+
+    //hamburger
+    $('#hamburger').on('click', function(){
+        $('span,.mainVisual_list').toggleClass('clicked');
+    });
 
     //page top
     $(window).scroll(function(){
@@ -31,10 +55,7 @@ $(function() {
         $('body, html').animate({scrollTop: 0}, 700);
         return false;
     });
-    //hamburger
-    $('#hamburger').on('click', function(){
-        $('span,.mainVisual_list').toggleClass('clicked');
-    });
+
     //navColor_change
     $(window).scroll(function(){
         var topH_search = parseInt($('.search').offset().top);
@@ -49,4 +70,6 @@ $(function() {
             $('.mainVisual_list::after').removeClass('.mainVisual_list-blue::after');
         }
     });
+
+
 });

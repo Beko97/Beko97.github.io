@@ -3,8 +3,8 @@
 html {font-size: 62.5%;}
 
 body {
-    background-color: #ffffff;
-    color: #FFFFFF;
+    background-color: #fff;
+    color: #fff;
     font-family: dnp-shuei-mgothic-std,sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -53,16 +53,38 @@ body {
     z-index: -1;
 }
 
-.mainVisual_list li {
+.mainVisual_item {
+    display: block;
     font-size: 2rem;
     margin-right: 30px;
     padding-top: 25px;
 }
 
-.mainVisual_list li a {color: #ffffff;}
+.mainVisual_item a {color: #fff;}
 
-.mainVisual_list li a:hover {
-    border-bottom: solid #ffffff;
+.mainVisual_item > a:hover {border-bottom: solid #fff;}
+
+#open {position: relative;}
+
+.idol_list {
+    background-color: #11bbf4;
+    display: none;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+}
+
+.idol_list a {
+    color: #fff;
+    display: block;
+    font-size: 1.6rem;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.idol_list a:hover {
+    background-color: #fff;
+    color: #11bbf4;
 }
 
 h1 {
@@ -91,7 +113,7 @@ h2 {
     font-style: normal;
     font-size: 4rem;
     text-align: center;
-    -webkit-text-stroke: 1px #FFFFFF;
+    -webkit-text-stroke: 1px #fff;
 }
 
 .blue {color: #3366ff;}
@@ -257,7 +279,7 @@ h3 {
 .banner_item {margin-left: 30px;}
 
 footer {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 10px 0;
 }
 
@@ -306,12 +328,18 @@ footer {
         background: url("image/blueDot.png") center;
     }
 
-    .mainVisual_list li {
+    .mainVisual_item {
         margin-right: 0;
         padding-top: 15px;
     }
 
     .mainVisual_list::after {top: 83%;}
+
+    .idol_list {
+        display: none;/*slideToggle表示させる*/
+        height: auto;
+        top: 50px;
+    }
 
     #hamburger {
         cursor: pointer;
@@ -326,7 +354,7 @@ footer {
 
     span, span:before, span:after {
         display: block;
-        background-color: #ffffff;
+        background-color: #fff;
         height: 4px;
         position: absolute;
         transition: 0.5s;
